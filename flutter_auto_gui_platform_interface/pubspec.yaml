@@ -1,0 +1,19 @@
+name: flutter_auto_gui_platform_interface
+description: Platform interface for flutter auto gui
+version: 0.0.1
+homepage: www.pub.dev
+publish_to: 'none'
+
+environment:
+  sdk: ">=2.17.3 <3.0.0"
+  flutter: ">=2.5.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0

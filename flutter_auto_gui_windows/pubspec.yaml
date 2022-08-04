@@ -1,0 +1,31 @@
+name: flutter_auto_gui_windows
+description: A new Flutter plugin project.
+version: 0.0.1
+homepage: www.google.com
+publish_to: 'none'
+
+environment:
+  sdk: ">=2.17.3 <3.0.0"
+  flutter: ">=2.5.0"
+
+flutter:
+  plugin:
+    implements: flutter_auto_gui
+    platforms:
+      windows:
+        pluginClass: FlutterAutoGuiWindows
+        dartPluginClass: FlutterAutoGuiWindows
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.2
+  flutter_auto_gui_platform_interface:
+    path: '../flutter_auto_gui_platform_interface/'
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  
