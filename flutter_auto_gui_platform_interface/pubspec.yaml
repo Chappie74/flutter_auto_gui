@@ -1,7 +1,9 @@
 name: flutter_auto_gui_platform_interface
-description: Platform interface for flutter auto gui
+description: Platform interface for flutter_auto_gui plugin
 version: 0.0.1
-homepage: www.pub.dev
+authors:
+  - "chappie74 <chappie.dev@gmail.com"
+homepage: https://github.com/Chappie74/flutter_auto_gui/tree/main/flutter_auto_gui
 publish_to: 'none'
 
 environment:
