@@ -6,6 +6,7 @@
 #include <iostream>
 
 #include "../utils.h"
+#include "../mouse/flutter_auto_gui_windows_mouse.h"
 namespace automator
 {
     void KeyboardAPI::write(std::string text, int interval)
@@ -14,6 +15,10 @@ namespace automator
         {
             SHORT key = Utils::convertCharacter(text[i]);
             KeyboardAPI::press(key, 1, interval);
+            if (MouseAPI::failSafeTriggered())
+            {
+                break;
+            }
         }
     }
     void KeyboardAPI::keyUp(WORD key)
@@ -76,6 +81,10 @@ namespace automator
             KeyboardAPI::keyDown(key);
             KeyboardAPI::keyUp(key);
             Utils::sleep(interval);
+            if (MouseAPI::failSafeTriggered())
+            {
+                break;
+            }
         }
     }
 

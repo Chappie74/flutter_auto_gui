@@ -11,8 +11,6 @@ namespace automator
     const std::string MouseAPI::MIDDLE = "middle";
     const std::string MouseAPI::H_AXIS = "horizontal";
     const std::string MouseAPI::V_AXIS = "vertical";
-    // const std::string MouseAPI::PRIMARY = "primary";
-    // const std::string MouseAPI::SECONDARY = "secondary";
 
     POINT MouseAPI::position()
     {

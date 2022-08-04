@@ -1,7 +1,9 @@
 name: flutter_auto_gui_windows
-description: A new Flutter plugin project.
+description: Windows implementation of flutter_auto_gui
 version: 0.0.1
-homepage: www.google.com
+authors:
+  - "chappie74 <chappie.dev@gmail.com"
+homepage: https://github.com/Chappie74/flutter_auto_gui/tree/main/flutter_auto_gui
 publish_to: 'none'
 
 environment:

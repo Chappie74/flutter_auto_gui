@@ -1,15 +1,7 @@
 # flutter_auto_gui_windows
 
-A new Flutter plugin project.
+The Windows implementation of [`flutter_auto_gui`][1].
 
-## Getting Started
+## Usage
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
-
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
+This package is [endorsed](https://docs.flutter.dev/development/packages-and-plugins/developing-packages#endorsed-federated-plugin), which means you can simply use `flutter_auto_gui` normally and this package will be automatically included when you do.

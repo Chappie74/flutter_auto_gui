@@ -215,7 +215,7 @@ class _MyAppState extends State<MyApp> {
                                   _api.write(
                                     text: 'hellO wOrld!',
                                     interval: const Duration(
-                                      milliseconds: 50,
+                                      milliseconds: 1000,
                                     ),
                                   );
                                 },
