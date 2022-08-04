@@ -33,9 +33,10 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
   // MOUSE
 
   /// Returns the current xy co-ordinate of the mouse cursor
+  ///
   /// Returns the current mouse position as [Point] of type [int]
   ///
-  Future<Point<int>?> position() {
+  Future<Point<int>?> position() async {
     throw UnimplementedError('position has not been implemented.');
   }
 
@@ -52,7 +53,7 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
     required Point<int> point,
     Duration duration = Duration.zero,
     Curve curve = Curves.linear,
-  }) {
+  }) async {
     throw UnimplementedError('moveTo has not been implemented.');
   }
 
@@ -71,7 +72,7 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
     required Size offset,
     Duration duration = Duration.zero,
     Curve curve = Curves.linear,
-  }) {
+  }) async {
     throw UnimplementedError('moveToRel has not been implemented.');
   }
 
@@ -92,7 +93,7 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
     required MouseButton button,
     Duration duration = Duration.zero,
     Curve curve = Curves.linear,
-  }) {
+  }) async {
     throw UnimplementedError('dragTo has not been implemented.');
   }
 
@@ -115,7 +116,7 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
     required MouseButton button,
     Duration duration = Duration.zero,
     Curve curve = Curves.linear,
-  }) {
+  }) async {
     throw UnimplementedError('dragToRel has not been implemented.');
   }
 
@@ -126,7 +127,7 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
   ///
   Future<void> mouseDown({
     MouseButton button = MouseButton.left,
-  }) {
+  }) async {
     throw UnimplementedError('mouseDown has not been implemented.');
   }
 
@@ -137,7 +138,7 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
   ///
   Future<void> mouseUp({
     MouseButton button = MouseButton.left,
-  }) {
+  }) async {
     throw UnimplementedError('mouseUp has not been implemented.');
   }
 
@@ -153,7 +154,7 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
     MouseButton button = MouseButton.left,
     int clicks = 1,
     Duration interval = Duration.zero,
-  }) {
+  }) async {
     throw UnimplementedError('click has not been implemented.');
   }
 
@@ -167,7 +168,7 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
   Future<void> scroll({
     required int clicks,
     Axis axis = Axis.vertical,
-  }) {
+  }) async {
     throw UnimplementedError('scroll has not been implemented.');
   }
 
@@ -178,9 +179,9 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
   /// `text`: [String] - String to type
   ///
   /// `interval`: [Duration] - interval between key presses
-  /// 
-  /// `omitInvalid`: [bool] - True to omit unsupported characters found in text, 
-  /// else an error is thrown. 
+  ///
+  /// `omitInvalid`: [bool] - True to omit unsupported characters found in text,
+  /// else an error is thrown.
   ///
   Future<void> write({
     required String text,
@@ -188,7 +189,7 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
       milliseconds: 50,
     ),
     bool omitInvalid = false,
-  }) {
+  }) async {
     throw UnimplementedError('write has not been implemented.');
   }
 
