@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_auto_gui_windows/flutter_auto_gui_windows.dart';
 
 void main() {
