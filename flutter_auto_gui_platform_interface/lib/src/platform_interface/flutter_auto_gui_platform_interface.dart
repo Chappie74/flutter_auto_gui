@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
@@ -8,6 +7,17 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 import '../method_channel/method_channel_flutter_auto_gui.dart';
 import '../types/types.dart';
 
+//
+// The functions in this interface should all be implemented in such a way that
+// all/most of the processing happens natively, rather than making method
+// channel calls. This hopefully will help circumvent any performance issues,
+// since making a call to the method channel can be very computionally expensive
+// and making excessive calls in a short period of time might be inefficient.
+// For example. Consider typing a tring in the [write] function.
+// Rather than making multiple [press] method calls in a for loop, prefer making
+// one method call with the string to write as parameter, and have the for loop
+// execute natively.
+//
 abstract class FlutterAutoGUIPlatform extends PlatformInterface {
   /// Constructs a FlutterAutoGUIPlatform.
   FlutterAutoGUIPlatform() : super(token: _token);
@@ -215,7 +225,7 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
   ///
   /// `times`: [int] - Amount of times to press the key
   ///
-  /// `interval`: [Duration] - Time between each key press
+  /// `interval`: [Duration] - Delay between each key press
   ///
   Future<void> press({
     required String key,
@@ -225,5 +235,22 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
     ),
   }) async {
     throw UnimplementedError('press has not been implemented.');
+  }
+
+  /// Sets the keys to down state in order and releases then in reverse order
+  ///
+  /// `keys`: [List] of [String] - List of keys to press
+  ///
+  /// `times`: [int] - Amount of times to press the key
+  ///
+  /// `interval`: [Duration] - Delay between each key press
+  ///
+  Future<void> hotkey({
+    required List<String> keys,
+    Duration interval = const Duration(
+      milliseconds: 50,
+    ),
+  }) async {
+    throw UnimplementedError('hotkey has not been implemented.');
   }
 }
