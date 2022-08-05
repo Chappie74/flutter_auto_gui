@@ -244,7 +244,7 @@ class _MyAppState extends State<MyApp> {
                           Wrap(
                             spacing: 5,
                             runSpacing: 5,
-                            children: [],
+                            children: const [],
                           ),
                         ],
                       ),
