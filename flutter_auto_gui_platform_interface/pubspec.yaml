@@ -4,7 +4,7 @@ version: 0.0.1
 authors:
   - "chappie74 <chappie.dev@gmail.com"
 homepage: https://github.com/Chappie74/flutter_auto_gui/tree/main/flutter_auto_gui
-publish_to: 'none'
+
 
 environment:
   sdk: ">=2.17.3 <3.0.0"
