@@ -22,5 +22,4 @@ over breaking changes for this package.
 See https://flutter.dev/go/platform-interface-breaking-changes for a discussion
 on why a less-clean interface is preferable to a breaking change.
 
-[1]: ../
-[2]: lib/path_provider_platform_interface.dart
+[1]: https://github.com/Chappie74/flutter_auto_gui/tree/main/flutter_auto_gui
