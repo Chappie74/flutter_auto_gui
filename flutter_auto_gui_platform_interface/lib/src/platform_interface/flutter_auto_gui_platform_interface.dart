@@ -40,12 +40,9 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  // MOUSE
-
   /// Returns the current xy co-ordinate of the mouse cursor
   ///
   /// Returns the current mouse position as [Point] of type [int]
-  ///
   Future<Point<int>?> position() async {
     throw UnimplementedError('position has not been implemented.');
   }
@@ -58,7 +55,6 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
   /// cursor. If duration is zero mouse cursor is moved instantaneously.
   ///
   /// `curve` : [Curve] - The curve function used if the duration is not zero.
-  ///
   Future<void> moveTo({
     required Point<int> point,
     Duration duration = Duration.zero,
@@ -77,7 +73,6 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
   /// cursor. If duration is zero mouse cursor is moved instantaneously.
   ///
   /// `curve` : [Curve] - The curve function used if the duration is not zero.
-  ///
   Future<void> moveToRel({
     required Size offset,
     Duration duration = Duration.zero,
@@ -97,7 +92,6 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
   /// cursor. If duration is zero mouse cursor is moved instantaneously.
   ///
   /// `curve` : [Curve] - The curve function used if the duration is not zero.
-  ///
   Future<void> dragTo({
     required Point<int> point,
     required MouseButton button,
@@ -120,7 +114,6 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
   /// cursor. If duration is zero mouse cursor is moved instantaneously.
   ///
   /// `curve` : [Curve] - The curve function used if the duration is not zero.
-  ///
   Future<void> dragToRel({
     required Size offset,
     required MouseButton button,
@@ -134,7 +127,6 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
   /// at the current mouse position
   ///
   /// `button` : [MouseButton] - The mouse button to press.
-  ///
   Future<void> mouseDown({
     MouseButton button = MouseButton.left,
   }) async {
@@ -145,7 +137,6 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
   /// at the current mouse position
   ///
   /// `button` : [MouseButton] - The mouse button to press.
-  ///
   Future<void> mouseUp({
     MouseButton button = MouseButton.left,
   }) async {
@@ -159,7 +150,6 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
   /// `clicks` : [int] - The amount of clicks to perform.
   ///
   /// `interval`: [Duration] - The time interval between each click.
-  ///
   Future<void> click({
     MouseButton button = MouseButton.left,
     int clicks = 1,
@@ -174,15 +164,12 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
   ///  a positive (forwards / right), negative (backwards / left)
   ///
   /// `axis` : [Axis] - Direction to scroll.
-  ///
   Future<void> scroll({
     required int clicks,
     Axis axis = Axis.vertical,
   }) async {
     throw UnimplementedError('scroll has not been implemented.');
   }
-
-  // KEYBOARD
 
   /// Types the characters in the string
   ///
@@ -192,7 +179,6 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
   ///
   /// `omitInvalid`: [bool] - True to omit unsupported characters found in text,
   /// else an error is thrown.
-  ///
   Future<void> write({
     required String text,
     Duration interval = const Duration(
@@ -214,7 +200,6 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
   /// Sets a single key to the up position
   ///
   /// `key`: [String] - String representation of the key
-  ///
   Future<void> keyDown({required String key}) async {
     throw UnimplementedError('keyup has not been implemented.');
   }
@@ -226,7 +211,6 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
   /// `times`: [int] - Amount of times to press the key
   ///
   /// `interval`: [Duration] - Delay between each key press
-  ///
   Future<void> press({
     required String key,
     int times = 1,
@@ -244,7 +228,6 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
   /// `times`: [int] - Amount of times to press the key
   ///
   /// `interval`: [Duration] - Delay between each key press
-  ///
   Future<void> hotkey({
     required List<String> keys,
     Duration interval = const Duration(
