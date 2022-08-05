@@ -151,6 +151,24 @@ namespace flutter_auto_gui_windows
             automator::KeyboardAPI::write(*text, *interval);
             result->Success();
         }
+        else if (method_call.method_name().compare("hotkey") == 0)
+        {
+
+            const auto *arguments = std::get_if<flutter::EncodableMap>(method_call.arguments());
+            assert(arguments);
+
+            auto *keys = std::get_if<flutter::EncodableList>(&(arguments->find(flutter::EncodableValue("keys"))->second));
+            auto *interval = std::get_if<int>(&(arguments->find(flutter::EncodableValue("interval"))->second));
+
+            std::list<WORD> hotkeys;
+            for (flutter::EncodableValue key : *keys)
+            {
+                hotkeys.push_back((WORD)*std::get_if<int>(&key));
+            }
+            automator::KeyboardAPI::hotkey(hotkeys, *interval);
+
+            result->Success();
+        }
         else if (method_call.method_name().compare("convertCharacter") == 0)
         {
             const auto *character = std::get_if<std::string>(method_call.arguments());

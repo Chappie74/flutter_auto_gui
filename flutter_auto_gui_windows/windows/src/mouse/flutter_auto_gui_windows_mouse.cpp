@@ -12,6 +12,7 @@ namespace automator
     const std::string MouseAPI::H_AXIS = "horizontal";
     const std::string MouseAPI::V_AXIS = "vertical";
 
+    // Gets the current position of the mouse
     POINT MouseAPI::position()
     {
         POINT p;
@@ -39,8 +40,7 @@ namespace automator
 
     void MouseAPI::drag(std::list<POINT> steps, int sleep, std::string button)
     {
-        // mouseDown(button);
-        // Utils::sleep(10);
+
         DWORD mouseButton = Utils::convertMouseButton(button, false);
         for (POINT p : steps)
         {
@@ -60,7 +60,6 @@ namespace automator
 
     void MouseAPI::mouseDown(std::string button)
     {
-
         MOUSEINPUT input;
         ZeroMemory(&input, sizeof(input));
         input.dwFlags = Utils::convertMouseButton(button, false);

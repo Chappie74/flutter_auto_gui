@@ -221,6 +221,17 @@ class _MyAppState extends State<MyApp> {
                                 },
                                 child: const Text('Writes \'hellO wOrld!\''),
                               ),
+                              ElevatedButton(
+                                onPressed: () async {
+                                  await Future.delayed(
+                                      const Duration(seconds: 2));
+                                  _api.hotkey(
+                                    keys: ['ctrl', 'shift', 'esc'],
+                                  );
+                                },
+                                child: const Text(
+                                    'Hotkey (control + shift + escape)'),
+                              ),
                             ],
                           ),
                         ],

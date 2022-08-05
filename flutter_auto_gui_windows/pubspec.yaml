@@ -1,10 +1,7 @@
 name: flutter_auto_gui_windows
-description: Windows implementation of flutter_auto_gui
+description: Windows implementation of flutter_auto_gui plugin
 version: 0.0.1
-authors:
-  - "chappie74 <chappie.dev@gmail.com"
-homepage: https://github.com/Chappie74/flutter_auto_gui/tree/main/flutter_auto_gui
-publish_to: 'none'
+repository: https://github.com/Chappie74/flutter_auto_gui/tree/main/flutter_auto_gui_windows
 
 environment:
   sdk: ">=2.17.3 <3.0.0"
@@ -22,8 +19,8 @@ dependencies:
   flutter:
     sdk: flutter
   plugin_platform_interface: ^2.0.2
-  flutter_auto_gui_platform_interface:
-    path: '../flutter_auto_gui_platform_interface/'
+  flutter_auto_gui_platform_interface: ^0.0.2+1
+    
 
 
 dev_dependencies:

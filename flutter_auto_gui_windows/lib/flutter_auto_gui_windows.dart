@@ -228,13 +228,29 @@ class FlutterAutoGuiWindows extends FlutterAutoGUIPlatform {
     });
   }
 
-  // Future<bool> _isShiftKey(String char) async {
-  //   assert(char.length == 1);
+  @override
+  Future<void> hotkey({
+    required List<String> keys,
+    Duration interval = const Duration(
+      milliseconds: 50,
+    ),
+  }) async {
+    if (keys.isEmpty) return;
+    List<int> keyCodes = [];
+    for (String key in keys) {
+      assert(keyMapping.containsKey(key),
+          'Invalid key. Key must be a supported string');
+      int keyCode = keyMapping[key]! == 0x000
+          ? await _convertCharacter(key)
+          : keyMapping[key]!;
+      keyCodes.add(keyCode);
+    }
 
-  //   return char == char.toUpperCase()
-  //       ? true
-  //       : '~!@#\$%^&*()_+{}|:"<>?'.contains(char);
-  // }
+    await _channel.invokeMethod('hotkey', {
+      'keys': keyCodes,
+      'interval': interval.inMilliseconds,
+    });
+  }
 
   Future<int> _convertCharacter(String char) async {
     assert(char.length == 1);

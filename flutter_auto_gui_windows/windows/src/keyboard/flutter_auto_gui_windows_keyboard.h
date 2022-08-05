@@ -11,9 +11,9 @@ namespace automator
         static void keyUp(WORD key);
         static void keyDown(WORD key);
         static void press(WORD key, int time = 1, int interval = 50);
+        static void hotkey(std::list<WORD> keys, int interval = 50);
 
     private:
-        static void executeKeyboardEvent(KEYBDINPUT input);
         static void executeKeyboardEvent(std::list<KEYBDINPUT> keyboardInputs);
     };
 }
