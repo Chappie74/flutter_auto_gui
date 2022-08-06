@@ -1,6 +1,8 @@
 name: flutter_auto_gui
-description: A new Flutter plugin project.
+description: A flutter plugin for desktop applications for controlling mouse and keyboard to automate interactions with other applications.
 version: 0.0.1
+homepage: https://flutter-auto-gui.chappie.dev/
+repository: https://github.com/Chappie74/flutter_auto_gui/tree/main/flutter_auto_gui
 environment:
   sdk: ">=2.17.3 <3.0.0"
   flutter: ">=2.5.0"
