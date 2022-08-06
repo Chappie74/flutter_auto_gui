@@ -1,11 +1,887 @@
 <!DOCTYPE html>
 
-
 <html>
-    <head>
-        <link rel="stylesheet" href="bootstrap-flatly.min.css">
-    </head>
-    <body>
-        <h1>Hello</h1>
-    </body>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="bootstrap-flatly.min.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div><h1>flutter_auto_gui</h1></div>
+			<a
+				href="https://github.com/Chappie74/flutter_auto_gui"
+				target="_blank"
+				><button type="button" class="btn btn-outline-primary">
+					github
+				</button></a
+			>
+			<button type="button" class="btn btn-outline-primary">
+				pub.dev
+			</button>
+
+			<hr />
+			<br />
+			<br />
+			<div id="methods">
+				<h1>Methods</h1>
+				<ul>
+					<li>
+						<h5><a href="#keyboard_section">Keyboard</a></h5>
+						<ul>
+							<li>
+								<a href="#write"><h5>write</h5></a>
+							</li>
+							<li>
+								<a href="#keyup"><h5>keyUp</h5></a>
+							</li>
+							<li>
+								<a href="#keydown"><h5>keyDown</h5></a>
+							</li>
+							<li>
+								<a href="#press"><h5>press</h5></a>
+							</li>
+							<li>
+								<a href="#hotkey"><h5>hotkey</h5></a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h5><a href="#mouse_section">Mouse</a></h5>
+						<ul>
+							<li>
+								<a href="#position"><h5>position</h5></a>
+							</li>
+							<li>
+								<a href="#moveto"><h5>moveTo</h5></a>
+							</li>
+							<li>
+								<a href="#movetorel"><h5>moveToRel</h5></a>
+							</li>
+							<li>
+								<a href="#dragto"><h5>dragTo</h5></a>
+							</li>
+							<li>
+								<a href="#dragtorel"><h5>dragToRel</h5></a>
+							</li>
+							<li>
+								<a href="#mousedown"><h5>mouseDown</h5></a>
+							</li>
+							<li>
+								<a href="#mouseup"><h5>mouseUp</h5></a>
+							</li>
+							<li>
+								<a href="#click"><h5>click</h5></a>
+							</li>
+							<li>
+								<a href="#scroll"><h5>scroll</h5></a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<br />
+			<br />
+			<div id="keyboard_section">
+				<h1>Keyboard</h1>
+
+				<br />
+
+				<h3 id="write">write(text, interval, omitInvalid)</h3>
+				<h5>Types the characters in the string</h5>
+				<h6><code>(windows)</code></h6>
+				<br />
+				<table class="table table-hover table-bordered">
+					<thead>
+						<tr>
+							<th>Arguments</th>
+							<th>Type</th>
+							<th>Description</th>
+							<th>Required</th>
+							<th>Default</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span class="text-primary"><b>text</b></span>
+							</td>
+							<td>
+								<a href="https://bit.ly/3Jzvmcc" target="_blank"
+									>string</a
+								>
+							</td>
+							<td>String to type</td>
+							<td>yes</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>
+								<span class="text-primary"
+									><b>interval</b></span
+								>
+							</td>
+							<td>
+								<a href="https://bit.ly/3daeb50" target="_blank"
+									>duration</a
+								>
+							</td>
+							<td>interval between key presses</td>
+							<td>no</td>
+							<td><code>Duration(miliseconds: 50)</code></td>
+						</tr>
+						<tr>
+							<td>
+								<span class="text-primary"
+									><b>omitInvalid</b></span
+								>
+							</td>
+							<td>
+								<a href="https://bit.ly/3BLAQyS" target="_blank"
+									>bool</a
+								>
+							</td>
+							<td>
+								true to omit unsupported characters found in
+								text,else an error is thrown for unsupported
+								keys
+							</td>
+							<td>no</td>
+							<td><code>false</code></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<br />
+
+				<h3 id="keyup">keyUp(key)</h3>
+				<h5>Sets a single key to the up position</h5>
+				<h6><code>(windows)</code></h6>
+				<br />
+				<table class="table table-hover table-bordered">
+					<thead>
+						<tr>
+							<th>Arguments</th>
+							<th>Type</th>
+							<th>Description</th>
+							<th>Required</th>
+							<th>Default</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span class="text-primary"><b>key</b></span>
+							</td>
+							<td>
+								<a href="https://bit.ly/3Jzvmcc" target="_blank"
+									>string</a
+								>
+							</td>
+							<td>String representation of the key</td>
+							<td>yes</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<br />
+
+				<h3 id="keydown">keyDown(key)</h3>
+				<h5>Sets a single key to the down position</h5>
+				<h6><code>(windows)</code></h6>
+				<br />
+				<table class="table table-hover table-bordered">
+					<thead>
+						<tr>
+							<th>Arguments</th>
+							<th>Type</th>
+							<th>Description</th>
+							<th>Required</th>
+							<th>Default</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span class="text-primary"><b>key</b></span>
+							</td>
+							<td>
+								<a href="https://bit.ly/3Jzvmcc" target="_blank"
+									>string</a
+								>
+							</td>
+							<td>String representation of the key</td>
+							<td>yes</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<br />
+
+				<h3 id="press">press(key, times, interval)</h3>
+				<h5>Sets a key down then up to simulate a key press</h5>
+				<h6><code>(windows)</code></h6>
+				<br />
+				<table class="table table-hover table-bordered">
+					<thead>
+						<tr>
+							<th>Arguments</th>
+							<th>Type</th>
+							<th>Description</th>
+							<th>Required</th>
+							<th>Default</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span class="text-primary"><b>key</b></span>
+							</td>
+							<td>
+								<a href="https://bit.ly/3Jzvmcc" target="_blank"
+									>string</a
+								>
+							</td>
+							<td>String representation of the key</td>
+							<td>yes</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>
+								<span class="text-primary"><b>times</b></span>
+							</td>
+							<td>
+								<a href="https://bit.ly/3Q3x9sv" target="_blank"
+									>int</a
+								>
+							</td>
+							<td>the amount of times to press the key</td>
+							<td>no</td>
+							<td><code>1</code></td>
+						</tr>
+						<tr>
+							<td>
+								<span class="text-primary"
+									><b>interval</b></span
+								>
+							</td>
+							<td>
+								<a href="https://bit.ly/3daeb50" target="_blank"
+									>duration</a
+								>
+							</td>
+							<td>Delay between each key press</td>
+							<td>no</td>
+							<td><code>Duration(miliseconds: 50)</code></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<br />
+
+				<h3 id="hotkey">hotkey(keys, interval)</h3>
+				<h5>
+					Sets the keys to down state in order and releases then in
+					reverse order
+				</h5>
+				<h6><code>(windows)</code></h6>
+				<br />
+				<table class="table table-hover table-bordered">
+					<thead>
+						<tr>
+							<th>Arguments</th>
+							<th>Type</th>
+							<th>Description</th>
+							<th>Required</th>
+							<th>Default</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span class="text-primary"><b>keys</b></span>
+							</td>
+							<td>
+								<a href="https://bit.ly/3C212p5" target="_blank"
+									>list ‹string›</a
+								>
+							</td>
+							<td>list of keys to press</td>
+							<td>yes</td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td>
+								<span class="text-primary"
+									><b>interval</b></span
+								>
+							</td>
+							<td>
+								<a href="https://bit.ly/3daeb50" target="_blank"
+									>duration</a
+								>
+							</td>
+							<td>Delay between each key press</td>
+							<td>no</td>
+							<td><code>Duration(miliseconds: 50)</code></td>
+						</tr>
+					</tbody>
+				</table>
+				<br />
+			</div>
+
+			<div id="mouse_section">
+				<h1>Mouse</h1>
+
+				<br />
+
+				<h3 id="position">position()</h3>
+				<h5>
+					Returns the current mouse position as
+					<a href="https://bit.ly/3SvxDJt">point</a>‹<a
+						href="https://bit.ly/3Q3x9sv"
+						target="_blank"
+						>int</a
+					>›
+				</h5>
+				<h6><code>(windows)</code></h6>
+				<br />
+				<table class="table table-hover table-bordered">
+					<thead></thead>
+					<tbody>
+						<tr>
+							<td>
+								<span class="text-primary"
+									><b>Return Type</b></span
+								>
+							</td>
+							<td colspan="4">
+								<a href="https://bit.ly/3SvxDJt">point</a>‹<a
+									href="https://bit.ly/3Q3x9sv"
+									target="_blank"
+									>int</a
+								>›
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<br />
+
+				<h3 id="moveto">moveTo(point, duration, curve)</h3>
+				<h5>Moves the mouse cursor to the xy co-ordinate</h5>
+				<h6><code>(windows)</code></h6>
+				<br />
+				<table class="table table-hover table-bordered">
+					<thead>
+						<tr>
+							<th>Arguments</th>
+							<th>Type</th>
+							<th>Description</th>
+							<th>Required</th>
+							<th>Default</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span class="text-primary"><b>point</b></span>
+							</td>
+							<td>
+								<a href="https://bit.ly/3SvxDJt">point</a>‹<a
+									href="https://bit.ly/3Q3x9sv"
+									target="_blank"
+									>int</a
+								>›
+							</td>
+							<td>x,y co-ordinate to move the mouse cursor to</td>
+							<td>yes</td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td>
+								<span class="text-primary"
+									><b>duration</b></span
+								>
+							</td>
+							<td>
+								<a href="https://bit.ly/3daeb50" target="_blank"
+									>duration</a
+								>
+							</td>
+							<td>
+								the amount of time it takes to move the mouse
+								cursor. If duration is zero mouse cursor is
+								moved instantaneously.
+							</td>
+							<td>no</td>
+							<td><code>Duration(miliseconds: 0)</code></td>
+						</tr>
+
+						<tr>
+							<td>
+								<span class="text-primary"><b>curve</b></span>
+							</td>
+							<td>
+								<a href="https://bit.ly/3zEqduM" target="_blank"
+									>curve</a
+								>
+							</td>
+							<td>
+								the curve function used if the duration is not
+								zero
+							</td>
+							<td>no</td>
+							<td><code>Curves.linear</code></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<br />
+
+				<h3 id="movetorel">moveToRel(offset, duration, curve)</h3>
+				<h5>
+					Moves the mouse cursor relative to it's current position.
+				</h5>
+				<h6><code>(windows)</code></h6>
+				<br />
+				<table class="table table-hover table-bordered">
+					<thead>
+						<tr>
+							<th>Arguments</th>
+							<th>Type</th>
+							<th>Description</th>
+							<th>Required</th>
+							<th>Default</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span class="text-primary"><b>offset</b></span>
+							</td>
+							<td>
+								<a href="https://bit.ly/3P3HQKl">size</a>
+							</td>
+							<td>
+								How far left (for negative values of
+								<code>size.width</code>) or right (for positive
+								values of <code>size.width</code>) / up (for
+								positive values of <code>size.height</code>) or
+								down (for negative values of
+								<code>size.height</code>) to move the mouse
+								cursor by
+							</td>
+							<td>yes</td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td>
+								<span class="text-primary"
+									><b>duration</b></span
+								>
+							</td>
+							<td>
+								<a href="https://bit.ly/3daeb50" target="_blank"
+									>duration</a
+								>
+							</td>
+							<td>
+								the amount of time it takes to move the mouse
+								cursor. If duration is zero mouse cursor is
+								moved instantaneously.
+							</td>
+							<td>no</td>
+							<td><code>Duration(miliseconds: 0)</code></td>
+						</tr>
+
+						<tr>
+							<td>
+								<span class="text-primary"><b>curve</b></span>
+							</td>
+							<td>
+								<a href="https://bit.ly/3zEqduM" target="_blank"
+									>curve</a
+								>
+							</td>
+							<td>
+								the curve function used if the duration is not
+								zero
+							</td>
+							<td>no</td>
+							<td><code>Curves.linear</code></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<br />
+
+				<h3 id="dragto">dragTo(point, button, duration, curve)</h3>
+				<h5>
+					Presses mouse button then moves the cursor to the xy
+					co-ordinate then release mouse button
+				</h5>
+				<h6><code>(windows)</code></h6>
+				<br />
+				<table class="table table-hover table-bordered">
+					<thead>
+						<tr>
+							<th>Arguments</th>
+							<th>Type</th>
+							<th>Description</th>
+							<th>Required</th>
+							<th>Default</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span class="text-primary"><b>point</b></span>
+							</td>
+							<td>
+								<a href="https://bit.ly/3SvxDJt">point</a>‹<a
+									href="https://bit.ly/3Q3x9sv"
+									target="_blank"
+									>int</a
+								>›
+							</td>
+							<td>x,y co-ordinate to move the mouse cursor to</td>
+							<td>yes</td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td>
+								<span class="text-primary"><b>button</b></span>
+							</td>
+							<td>
+								<a href="#">MouseButton</a>
+							</td>
+							<td>the mouse button to press down while moving</td>
+							<td>yes</td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td>
+								<span class="text-primary"
+									><b>duration</b></span
+								>
+							</td>
+							<td>
+								<a href="https://bit.ly/3daeb50" target="_blank"
+									>duration</a
+								>
+							</td>
+							<td>
+								the amount of time it takes to move the mouse
+								cursor. If duration is zero mouse cursor is
+								moved instantaneously.
+							</td>
+							<td>no</td>
+							<td><code>Duration(miliseconds: 0)</code></td>
+						</tr>
+
+						<tr>
+							<td>
+								<span class="text-primary"><b>curve</b></span>
+							</td>
+							<td>
+								<a href="https://bit.ly/3zEqduM" target="_blank"
+									>curve</a
+								>
+							</td>
+							<td>
+								the curve function used if the duration is not
+								zero
+							</td>
+							<td>no</td>
+							<td><code>Curves.linear</code></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<br />
+
+				<h3 id="dragtorel">
+					dragToRel(offset, button, duration, curve)
+				</h3>
+				<h5>
+					Pressed mouse button then moves the mouse cursor relative to
+					it's current position then release mouse button.
+				</h5>
+				<h6><code>(windows)</code></h6>
+				<br />
+				<table class="table table-hover table-bordered">
+					<thead>
+						<tr>
+							<th>Arguments</th>
+							<th>Type</th>
+							<th>Description</th>
+							<th>Required</th>
+							<th>Default</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span class="text-primary"><b>offset</b></span>
+							</td>
+							<td>
+								<a href="https://bit.ly/3P3HQKl">size</a>
+							</td>
+							<td>
+								How far left (for negative values of
+								<code>size.width</code>) or right (for positive
+								values of <code>size.width</code>) / up (for
+								positive values of <code>size.height</code>) or
+								down (for negative values of
+								<code>size.height</code>) to move the mouse
+								cursor by
+							</td>
+							<td>yes</td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td>
+								<span class="text-primary"><b>button</b></span>
+							</td>
+							<td>
+								<a href="#">MouseButton</a>
+							</td>
+							<td>the mouse button to press down while moving</td>
+							<td>yes</td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<td>
+								<span class="text-primary"
+									><b>duration</b></span
+								>
+							</td>
+							<td>
+								<a href="https://bit.ly/3daeb50" target="_blank"
+									>duration</a
+								>
+							</td>
+							<td>
+								the amount of time it takes to move the mouse
+								cursor. If duration is zero mouse cursor is
+								moved instantaneously.
+							</td>
+							<td>no</td>
+							<td><code>Duration(miliseconds: 0)</code></td>
+						</tr>
+
+						<tr>
+							<td>
+								<span class="text-primary"><b>curve</b></span>
+							</td>
+							<td>
+								<a href="https://bit.ly/3zEqduM" target="_blank"
+									>curve</a
+								>
+							</td>
+							<td>
+								the curve function used if the duration is not
+								zero
+							</td>
+							<td>no</td>
+							<td><code>Curves.linear</code></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<br />
+
+				<h3 id="mousedown">mouseDown(button)</h3>
+				<h5>
+					Performs pressing a mouse button down (but not up
+					afterwards) at the current mouse position
+				</h5>
+				<h6><code>(windows)</code></h6>
+				<br />
+				<table class="table table-hover table-bordered">
+					<thead>
+						<tr>
+							<th>Arguments</th>
+							<th>Type</th>
+							<th>Description</th>
+							<th>Required</th>
+							<th>Default</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span class="text-primary"><b>button</b></span>
+							</td>
+							<td>
+								<a href="#">MouseButton</a>
+							</td>
+							<td>the mouse button to press</td>
+							<td>no</td>
+							<td><code>MouseButton.left</code></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<br />
+
+				<h3 id="mouseup">mouseUp(button)</h3>
+				<h5>
+					Performs releasing a mouse button up (but not down
+					beforehand) at the current mouse position
+				</h5>
+				<h6><code>(windows)</code></h6>
+				<br />
+				<table class="table table-hover table-bordered">
+					<thead>
+						<tr>
+							<th>Arguments</th>
+							<th>Type</th>
+							<th>Description</th>
+							<th>Required</th>
+							<th>Default</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span class="text-primary"><b>button</b></span>
+							</td>
+							<td>
+								<a href="#">MouseButton</a>
+							</td>
+							<td>the mouse button to release</td>
+							<td>no</td>
+							<td><code>MouseButton.left</code></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<br />
+
+				<h3 id="click">click(button, clicks, interval)</h3>
+				<h5>
+					Performs pressing a mouse button down and then releasing
+					immediately it
+				</h5>
+				<h6><code>(windows)</code></h6>
+				<br />
+				<table class="table table-hover table-bordered">
+					<thead>
+						<tr>
+							<th>Arguments</th>
+							<th>Type</th>
+							<th>Description</th>
+							<th>Required</th>
+							<th>Default</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span class="text-primary"><b>button</b></span>
+							</td>
+							<td>
+								<a href="#">MouseButton</a>
+							</td>
+							<td>the mouse button to click</td>
+							<td>no</td>
+							<td><code>MouseButton.left</code></td>
+						</tr>
+						<tr>
+							<td>
+								<span class="text-primary"><b>clicks</b></span>
+							</td>
+							<td>
+								<a href="https://bit.ly/3Q3x9sv" target="_blank"
+									>int</a
+								>
+							</td>
+							<td>the amount of times to press the key</td>
+							<td>no</td>
+							<td><code>1</code></td>
+						</tr>
+						<tr>
+							<td>
+								<span class="text-primary"
+									><b>interval</b></span
+								>
+							</td>
+							<td>
+								<a href="https://bit.ly/3daeb50" target="_blank"
+									>duration</a
+								>
+							</td>
+							<td>interval between key presses</td>
+							<td>no</td>
+							<td><code>Duration(miliseconds: 0)</code></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<br />
+
+				<h3 id="scroll">scroll(clicks, axis)</h3>
+				<h5>
+					Performs a scroll of the mouse forwards or backwards in
+					horizontal or vertical direction
+				</h5>
+				<h6><code>(windows)</code></h6>
+				<br />
+				<table class="table table-hover table-bordered">
+					<thead>
+						<tr>
+							<th>Arguments</th>
+							<th>Type</th>
+							<th>Description</th>
+							<th>Required</th>
+							<th>Default</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span class="text-primary"><b>clicks</b></span>
+							</td>
+							<td>
+								<a href="https://bit.ly/3Q3x9sv" target="_blank"
+									>int</a
+								>
+							</td>
+							<td>
+								How much to scroll the mouse by positive
+								(forwards / right), negative (backwards / left)
+							</td>
+							<td>yes</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>
+								<span class="text-primary"><b>axis</b></span>
+							</td>
+							<td>
+								<a href="https://bit.ly/3zwxPzw" target="_blank"
+									>axis</a
+								>
+							</td>
+							<td>Direction to scroll</td>
+							<td>no</td>
+							<td><code> axis.vertical</code></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<br />
+			</div>
+		</div>
+	</body>
 </html>
