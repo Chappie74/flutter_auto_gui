@@ -1,3 +1,3 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+-   Initial implementation. All mouse and keyboard functionality present.
