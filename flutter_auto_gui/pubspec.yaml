@@ -1,8 +1,6 @@
 name: flutter_auto_gui
 description: A new Flutter plugin project.
 version: 0.0.1
-homepage: www.google.com
-publish_to: 'none'
 environment:
   sdk: ">=2.17.3 <3.0.0"
   flutter: ">=2.5.0"
@@ -17,10 +15,8 @@ dependencies:
   flutter:
     sdk: flutter
   plugin_platform_interface: ^2.0.2
-  flutter_auto_gui_windows:
-    path: '../flutter_auto_gui_windows/'
-  flutter_auto_gui_platform_interface:
-    path: '../flutter_auto_gui_platform_interface/'
+  flutter_auto_gui_windows: ^0.0.1
+  flutter_auto_gui_platform_interface: ^0.0.2+1
 
 
 dev_dependencies:

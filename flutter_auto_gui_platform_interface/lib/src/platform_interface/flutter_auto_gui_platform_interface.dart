@@ -225,8 +225,6 @@ abstract class FlutterAutoGUIPlatform extends PlatformInterface {
   ///
   /// `keys`: [List] of [String] - List of keys to press
   ///
-  /// `times`: [int] - Amount of times to press the key
-  ///
   /// `interval`: [Duration] - Delay between each key press
   Future<void> hotkey({
     required List<String> keys,

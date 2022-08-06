@@ -1,18 +1,11 @@
 # flutter_auto_gui
 
-A new Flutter plugin project.
+A flutter plugin for desktop applications for controlling mouse and keyboard to automate interactions with other applications. This plugin is highly inspired by the [PyAutoGui](https://pyautogui.readthedocs.io/en/latest/) python package and [RobotJs](http://robotjs.io/) and as such tries to mimic most of the available methods.
 
-## Getting Started
+|             | Android | iOS | Linux  | macOS  | Windows     |
+| ----------- | ------- | --- | ------ | ------ | ----------- |
+| **Support** | N/A     | N/A | In dev | In dev | Windows 10+ |
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+# Usage
 
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-The plugin project was generated without specifying the `--platforms` flag, no platforms are currently supported.
-To add platforms, run `flutter create -t plugin --platforms <platforms> .` in this directory.
-You can also find a detailed instruction on how to add platforms in the `pubspec.yaml` at https://flutter.dev/docs/development/packages-and-plugins/developing-packages#plugin-platforms.
+To use this plugin add `flutter_auto_gui` as a [dependency in your pubspec.yaml file](https://docs.flutter.dev/development/platform-integration/platform-channels?tab=type-mappings-c-plus-plus-tab).

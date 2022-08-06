@@ -231,4 +231,21 @@ class FlutterAutoGUI {
       interval: interval,
     );
   }
+
+  /// Sets the keys to down state in order and releases then in reverse order
+  ///
+  /// `keys`: [List] of [String] - List of keys to press
+  ///
+  /// `interval`: [Duration] - Delay between each key press
+  static Future<void> hotkey({
+    required List<String> keys,
+    Duration interval = const Duration(
+      milliseconds: 50,
+    ),
+  }) async {
+    _platform.hotkey(
+      keys: keys,
+      interval: interval,
+    );
+  }
 }

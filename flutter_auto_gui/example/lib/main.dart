@@ -221,6 +221,17 @@ class _MyAppState extends State<MyApp> {
                                 },
                                 child: const Text('Writes \'hellO wOrld!\''),
                               ),
+                              ElevatedButton(
+                                onPressed: () async {
+                                  await Future.delayed(
+                                      const Duration(seconds: 2));
+                                  FlutterAutoGUI.hotkey(
+                                    keys: ['ctrl', 'shift', 'esc'],
+                                  );
+                                },
+                                child: const Text(
+                                    'Hotkey (control + shift + escape)'),
+                              ),
                             ],
                           ),
                         ],
@@ -233,7 +244,7 @@ class _MyAppState extends State<MyApp> {
                           Wrap(
                             spacing: 5,
                             runSpacing: 5,
-                            children: [],
+                            children: const [],
                           ),
                         ],
                       ),
