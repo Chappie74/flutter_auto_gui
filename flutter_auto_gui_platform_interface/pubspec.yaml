@@ -3,11 +3,11 @@ description: Platform interface for flutter_auto_gui plugin
 repository: https://github.com/Chappie74/flutter_auto_gui/tree/main/flutter_auto_gui_platform_interface
 # NOTE: We strongly prefer non-breaking changes, even at the expense of a
 # less-clean API. See https://flutter.dev/go/platform-interface-breaking-changes
-version: 0.0.2+1
+version: 0.0.3
 
 environment:
-  sdk: ">=2.17.3 <3.0.0"
-  flutter: ">=2.5.0"
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=2.0.0"
 
 dependencies:
   flutter:
@@ -17,4 +17,4 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^1.0.4
