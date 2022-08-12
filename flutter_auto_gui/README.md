@@ -33,7 +33,7 @@ All functions are static and can be used like the following
 
 Check out the [`example`][2] project for further assistance.
 
-A compresive [`documentation`][1] can be found [`here`][1]
+A comprehensive [`documentation`][1] can be found [`here`][1]
 
 <br>
 
