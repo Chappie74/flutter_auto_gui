@@ -47,6 +47,8 @@ If you find a bug or want a feature, but don't know how to fix/implement it, ple
 
 If you fixed a bug or implemented a new feature, please send a [pull request](https://github.com/Chappie74/flutter_auto_gui/pulls).
 
+[![Buy Me A Coffee](https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png 'Buy Me A Coffee')](https://www.buymeacoffee.com/chappie74dO)
+
 [1]: https://flutter-auto-gui.chappie.dev/
 [2]: https://github.com/Chappie74/flutter_auto_gui/blob/main/flutter_auto_gui/example/lib/main.dart
 [3]: https://docs.flutter.dev/development/packages-and-plugins/developing-packages#federated-plugins
