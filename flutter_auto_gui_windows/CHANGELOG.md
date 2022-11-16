@@ -7,3 +7,7 @@
 ## 0.0.2
 
 -   Updated to support older version of flutter(2.10.0) and dart(2.16.0)
+
+## 0.0.3
+
+-   Improve precision of coordinates at which cursor should move to.
