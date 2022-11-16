@@ -30,8 +30,8 @@ namespace automator
             }
             MOUSEINPUT input;
             ZeroMemory(&input, sizeof(input));
-            input.dx = p.x * (65536 / GetSystemMetrics(SM_CXVIRTUALSCREEN));
-            input.dy = p.y * (65536 / GetSystemMetrics(SM_CYVIRTUALSCREEN));
+            input.dx = ::MulDiv(p.x, 65536, GetSystemMetrics(SM_CXVIRTUALSCREEN) - 1);
+            input.dy = ::MulDiv(p.y, 65536, GetSystemMetrics(SM_CYVIRTUALSCREEN) - 1);
             input.dwFlags = MOUSEEVENTF_MOVE | MOUSEEVENTF_VIRTUALDESK | MOUSEEVENTF_ABSOLUTE;
             MouseAPI::executeMouseEvent(input);
             Utils::sleep(sleep);
@@ -49,8 +49,8 @@ namespace automator
 
             MOUSEINPUT input;
             ZeroMemory(&input, sizeof(input));
-            input.dx = p.x * (65536 / GetSystemMetrics(SM_CXVIRTUALSCREEN));
-            input.dy = p.y * (65536 / GetSystemMetrics(SM_CYVIRTUALSCREEN));
+            input.dx = ::MulDiv(p.x, 65536, GetSystemMetrics(SM_CXVIRTUALSCREEN) - 1);
+            input.dy = ::MulDiv(p.y, 65536, GetSystemMetrics(SM_CYVIRTUALSCREEN) - 1);
             input.dwFlags = MOUSEEVENTF_MOVE | MOUSEEVENTF_VIRTUALDESK | MOUSEEVENTF_ABSOLUTE | mouseButton;
             MouseAPI::executeMouseEvent(input);
             std::this_thread::sleep_for(std::chrono::milliseconds(sleep));

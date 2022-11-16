@@ -1,6 +1,6 @@
 name: flutter_auto_gui_windows
 description: Windows implementation of flutter_auto_gui plugin
-version: 0.0.2
+version: 0.0.3
 repository: https://github.com/Chappie74/flutter_auto_gui/tree/main/flutter_auto_gui_windows
 
 environment:
